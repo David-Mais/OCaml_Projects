@@ -1,3 +1,15 @@
+(* TODO 
+   1) Define a data type for a student. For every student the first name, last name, 
+   identification number, current semester as well as the grades received in different 
+   courses have to be stored. A course is simply represented by a number.
+  
+   2) Define database as a list of students.
+   3) Write a function insert : student -> database -> database that inserts a student into the database.
+   4) Write a function find_by_id : int -> db -> student list that returns a list with all 
+   students with the given id (either a single student or an empty list, if no such student exists).
+   5) Implement a function find_by_last_name : string -> database -> student list to find all students with a given last name.
+
+*)
 type student = {
   first_name : string;
   last_name : string;
