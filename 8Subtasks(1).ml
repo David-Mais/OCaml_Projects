@@ -9,9 +9,9 @@ let rec member c t l = match l with
 else member c t tail;;
 
 (*todo write a compare function that returns true if two numbers are equal else it returns false*)
-(* let compare a b =
+let compare a b =
   if(a = b) then true
-  else false;; *)
+  else false;;
 
 
   (* TODO write a function that uses the previously defined "compare" function *)
