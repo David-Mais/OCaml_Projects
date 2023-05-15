@@ -54,11 +54,6 @@ let rec merge_custom_llists l1 l2 = match l1 (), l2 () with
   |ConsC (a,b), ConsC (c, d) -> if(a < c) then fun () -> ConsC (a, merge_custom_llists b l2)
   else fun () -> ConsC (c, merge_custom_llists l1 d);;
 
-let rec map_over_ocaml_llist f l =
-    match Lazy.force l with
-    | NilO -> lazy NilO
-    | ConsO (a, b) -> lazy (ConsO (f a, map_over_ocaml_llist f b));;
-
 let rec merge_ocaml_llists l1 l2 = 
   match Lazy.force l1, Lazy.force l2 with
   |NilO, _ -> l2
